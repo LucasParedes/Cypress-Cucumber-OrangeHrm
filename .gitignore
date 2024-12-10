@@ -1,0 +1,7 @@
+# Dependency directory
+node_modules/
+.env
+mochawesome-report
+cypress/screenshots
+cypress/downloads
+cypress/videos

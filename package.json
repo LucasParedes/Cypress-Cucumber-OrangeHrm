@@ -1,0 +1,50 @@
+{
+	"name": "Cypress-Cucumber-OrangeHrm",
+	"version": "1.0.0",
+	"description": "Automatizacion con Cypress y Cucumber practicando con la web OrangeHrm",
+	"main": "index.js",
+	"scripts": {
+		"lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+		"lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+		"regresion": "npx cypress run -e TAGS='@regresion'",
+		"html-report": "node cucumber-html-report.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cypress": "^13.15.2"
+	},
+	"type": "module",
+	"devDependencies": {
+		"@badeball/cypress-cucumber-preprocessor": "21.0.3",
+		"@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
+		"cypress-plugin-steps": "1.1.1",
+		"eslint": "8.56.0",
+		"eslint-plugin-chai-friendly": "0.7.4",
+		"eslint-plugin-cypress": "2.15.1",
+		"eslint-plugin-only-warn": "1.1.0",
+		"eslint-plugin-prettier": "5.1.3",
+		"multiple-cucumber-html-reporter": "3.8.0",
+		"prettier": "3.2.4"
+	},
+	"cypress-cucumber-preprocessor": {
+		"stepDefinitions": "cypress/e2e/step-definitions/**/*.js",
+		"cucumberJson": {
+			"generate": true
+		},
+		"html": {
+			"enabled": true,
+			"output": "cypress/reports/cucumber-html/cucumber-html.html"
+		},
+		"messages": {
+			"enabled": true,
+			"output": "cypress/reports/cucumber-json/cucumber-json.js"
+		},
+		"json": {
+			"enabled": true,
+			"formatter": "cucumber-json-formatter",
+			"output": "cypress/reports/cucumber-json/cucumber-json.js"
+		}
+	}
+}
