@@ -8,7 +8,7 @@ run-name: ${{github.actor}}👨🏻‍🔬 triggered Regression in ${{github.ref
 on:
   push:
     branches:
-    - QA
+    - main
 
 jobs:
   RegressionTesting:
