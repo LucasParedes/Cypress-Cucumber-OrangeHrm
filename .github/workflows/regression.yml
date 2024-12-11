@@ -1,7 +1,7 @@
 #* 🧙🏻‍♂️BIENVENIDO A LOS PIPELINES DE CONTINUOUS INTEGRATION DE "ARI - Hija de Aurora"!
 #? 🤖Este Pipeline de CI se activa al hacer MERGE a la rama "QA" o "MAIN",
 #? 🧪Consiste en ejecutar TODOS los tests del Repo e importar los resultados a Jira!🚀
-#! 👩🏻‍🔬Este Pipeline de CI NO DEBE EDITARSE sin permiso del QA Lead.
+#! 👩🏻‍🔬Este Pipeline de CI NO DEBE EDITARSE sin permiso del QA Lead !!
 name: 🧪Pipeline Regression in QA
 run-name: ${{github.actor}}👨🏻‍🔬 triggered Regression in ${{github.ref_name}}
 
