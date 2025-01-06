@@ -59,9 +59,9 @@ jobs:
     - name: 🧪Cypress Run Test Coverage in Chrome
       uses: cypress-io/github-action@v4
       with:
-        browser: Chrome
+        browser: chrome
         command: |
-          npm file cypress/e2e/features/login.feature
+          npx cypress run --spec cypress/e2e/features/login.feature
 
     - name: 🔧Generate Cucumber HTML Report
       if: always()
