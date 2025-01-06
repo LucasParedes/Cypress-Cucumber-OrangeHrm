@@ -102,12 +102,12 @@ jobs:
       run: |
         npm run cucumber-report
 
-    - name: 📊Upload Artifact HTML Report
+    - name: 📊Upload Artifact 🍵Cucumber HTML Report
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: regression-test-report
-        path: cucumber-html-multi-reports
+        path: reports/cucumber-html-multi-reports/index.html
 
   Create-PullRequest:
     needs: [ RegressionTest, Regression-ArtifactReport ]
