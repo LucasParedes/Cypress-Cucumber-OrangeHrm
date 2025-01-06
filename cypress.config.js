@@ -27,6 +27,7 @@ export default defineConfig({
 		defaultCommandTimeout: 35000, // tiempo para cada comando en Cypress
 		requestTimeout: 90000, // tiempo para que una solicitud HTTP se complete.
 		chromeWebSecurity: false, //permite realizar peticiones entre dominios diferentes durante las pruebas
+		reporter: 'cypress-multi-reporters',
 		retries: {
 			runMode: 0, // se ejecuta el caso dos 2 veces si falla mas en run
 			openMode: 0, // se ejecuta el caso 1 vez sola si falla en open
