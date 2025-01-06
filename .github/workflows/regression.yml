@@ -50,7 +50,7 @@ jobs:
       with:
         browser: chrome
         command: |
-          npm regression:chrome
+          npm run regression:chrome
 
   Regression-ArtifactReport:
     name: report
@@ -95,12 +95,12 @@ jobs:
       with:
         browser: chrome
         command: |
-          npm regression:chrome
+          npm run regression:chrome
 
     - name: 📬Generate HTML Regression Report
       if: always()
       run: |
-        npm cucumber-report
+        npm run cucumber-report
 
     - name: 📊Upload Artifact HTML Report
       if: always()
