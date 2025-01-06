@@ -9,7 +9,7 @@ on:
 jobs:
   RegressionTest:
     name: regression
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
     - name: 💻Checkout
@@ -54,7 +54,7 @@ jobs:
 
   Regression-ArtifactReport:
     name: report
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
     - name: 💻Checkout
@@ -111,7 +111,7 @@ jobs:
 
   Create-PullRequest:
     needs: [ RegressionTest, Regression-ArtifactReport ]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
 
     - name: 💻Checkout
@@ -154,7 +154,7 @@ jobs:
 
   AutoMerge-into-Main:
     needs: [ Create-PullRequest ]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
     - name: 🧬 Merge -> MAIN
       uses: devmasx/merge-branch@master

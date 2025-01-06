@@ -1,3 +1,4 @@
+@regresion
 Feature: Iniciar sesión
   COMO usuario de la web
   QUIERO poder iniciar sesión con mis credenciales

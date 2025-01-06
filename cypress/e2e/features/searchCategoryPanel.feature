@@ -1,3 +1,4 @@
+@regresion
 Feature: Filter for a category section by search bar
   COMO usuario de la web
   QUIERO poder filtrar la busqueda de la secciones
