@@ -1,8 +1,8 @@
 import { generate } from 'multiple-cucumber-html-reporter';
 
 generate({
-	jsonDir: 'cypress/reports/cucumber-json/cucumber-json.js',
-	reportPath: 'cypress/reports/html-multi-reports/',
+	jsonDir: './reports/cucumber-reports/',
+	reportPath: './reports/cucumber-html-multi-reports/',
 	displayDuration: true,
 	displayReportTime: true,
 	metadata: {
